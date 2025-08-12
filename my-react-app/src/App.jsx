@@ -1,9 +1,11 @@
 import './App.css'
-
+import Navbar from './components/navbar.jsx'
+import Home from './components/home.jsx'
 function App() {
   return (
     <div>
-      <p className=''>helllo world</p>
+      <Navbar />
+      <Home />
     </div>
   )
 }
