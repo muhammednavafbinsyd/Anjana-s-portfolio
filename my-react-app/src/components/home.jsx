@@ -40,9 +40,7 @@ function home() {
       </div>
 
       {/* Right Side - Image with Yellow Background */}
-      <div className="relative mt-10 md:mt-0">
-        {/* Yellow shape */}
-        <div className="absolute -z-10 top-0 right-0 w-full h-full rounded-bl-[200px] md:rounded-bl-[300px]"></div>
+      <div >
         {/* Profile image */}
         <img
           src={profileImage}
