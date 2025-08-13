@@ -12,7 +12,7 @@ function Home() {
   ];
 
   return (
-    <div className='bg-[#f8f9ff]' style={{backgroundImage:"profileImage"}}>
+<div className='bg-[#f8f9ff]' style={{backgroundImage: ` url(${profileImage})`}}>
       {/* Navbar */}
       <div className="flex">
         {/* Left section */}
