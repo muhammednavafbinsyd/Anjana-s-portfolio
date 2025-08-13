@@ -11,7 +11,7 @@
     ];
 
     return (
-        <nav className="w-full">
+        <nav className="w-full bg-[#f8f9ff] ">
         {/* Desktop & mobile wrapper */}
         <div className="flex">
             {/* Left section */}

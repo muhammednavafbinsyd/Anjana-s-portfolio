@@ -26,11 +26,12 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="px-4 md:px-28 py-28">
+    <section id="projects" className="px-4 md:px-28 py-28 bg-[#f8f9ff] ">
       {/* Section Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
         <div className="w-16 h-1 mx-auto mt-2"></div>
+          <div className="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
       </div>
 
       {/* Project Cards */}
@@ -38,12 +39,12 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            className={`flex flex-col md:flex-row items-center justify-between ${
+              index % 2 !== 1 ? "md:flex-row-reverse" : ""
             } bg-white shadow-md rounded-2xl overflow-hidden`}
           >
             {/* Image */}
-            <div className="md:w-1/2">
+            <div className="md:max-w-2xl">
               <img
                 src={project.image}
                 alt={project.name}

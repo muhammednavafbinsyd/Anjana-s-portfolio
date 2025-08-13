@@ -19,19 +19,19 @@ export default function App() {
           </button>
         </div>
         <div className="flex-1 flex justify-center">
-          <div className="relative w-64 h-64 rounded-full overflow-hidden bg-yellow-400 flex items-center justify-center">
+          <div className="rounded-full overflow-hidden justify-center">
             <img
               src={profileImg}
               alt="Profile"
-              className="w-56 h-56 object-cover rounded-full border-4 border-yellow-400"
+              className="w-80 h-80 object-cover rounded-full border-4 border-none"
             />
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Contact Section */}
       <section className="container mx-auto px-6 md:px-12 py-16 text-center flex-1">
-        <h2 className="text-2xl font-bold mb-1">Projects</h2>
+        <h2 className="text-2xl font-bold mb-1">Contact me</h2>
         <div className="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
         
         <form className="max-w-md mx-auto space-y-4">

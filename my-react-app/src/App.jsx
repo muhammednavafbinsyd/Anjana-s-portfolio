@@ -7,7 +7,7 @@ import AboutMe from './components/about.jsx'
 function App() {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Home/>
       <Projects/>   
       <AboutMe/>
