@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import profileImage from "../images/image.png"; // use your exact screenshot image here
+import profileImage from "../images/image.png"; // replace with your image
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function Home() {
@@ -12,25 +12,22 @@ function Home() {
   ];
 
   return (
-<div className='bg-[#f8f9ff]' style={{backgroundImage: ` url(${profileImage})`}}>
+    <div className="bg-[#f8f9ff] min-h-screen">
       {/* Navbar */}
-      <div className="flex">
-        {/* Left section */}
-        <div className="flex items-center px-6 py-4 flex-1">
-          <h1 className="text-lg font-medium text-gray-800">Anjana O</h1>
-        </div>
+      <div className="flex justify-between items-center px-6 py-4 ">
+        <h1 className="text-lg font-medium text-gray-800">Anjana O</h1>
 
-        {/* Right section (desktop) */}
-        <div className="hidden md:flex items-center px-8 py-4 space-x-10">
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-10 z-10" >
           {navigation.map((item) => (
-            <a key={item.name} href={item.href}>
+            <a key={item.name} href={item.href} className="text-gray-800 hover:text-yellow-500">
               {item.name}
             </a>
           ))}
         </div>
 
-        {/* Mobile hamburger button */}
-        <div className="md:hidden flex items-center px-6 py-4">
+        {/* Mobile menu button */}
+        <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (
               <XMarkIcon className="w-6 h-6 text-gray-800" />
@@ -43,9 +40,9 @@ function Home() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 py-4 space-y-4">
+        <div className="md:hidden flex flex-col px-6 py-4 space-y-4">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href}>
+            <a key={item.name} href={item.href} className="text-gray-800 hover:text-yellow-500">
               {item.name}
             </a>
           ))}
@@ -53,18 +50,15 @@ function Home() {
       )}
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="bg-[#f8f9ff] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10"
-      >
-        {/* Left Side - Text */}
+      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10">
+        {/* Left content */}
         <div className="max-w-lg">
           <p className="text-sm font-semibold text-yellow-500 uppercase tracking-wide">
             Creative / Artist
           </p>
           <h1 className="text-4xl font-bold text-gray-900 mt-2">
             Hello, my name is <br />
-            <span className="text-gray-900">Anjana O</span>
+            <span>Anjana O</span>
           </h1>
           <p className="text-gray-600 mt-4">
             Short text with details about you, what you do or your professional
@@ -90,6 +84,17 @@ function Home() {
           </div>
         </div>
 
+        {/* Right side with image & blob background */}
+        <div className="relative bottom-25 left-38 mt-10 md:mt-0 w-full md:w-1/2 flex justify-center">
+          <div
+            className="absolute top-0  right-0 w-[90%] h-[100%]"
+          ></div>
+          <img
+            src={profileImage}
+            alt="Profile"
+            className="relative w-[80%] object-cover"
+          />
+        </div>
       </section>
     </div>
   );
