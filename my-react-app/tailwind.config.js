@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -6,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        comfortaa: ["Comfortaa", "sans-serif"], // add custom font
-      },
+        'comfortaa': ['Comfortaa', 'cursive'],
+      }
     },
   },
   plugins: [],

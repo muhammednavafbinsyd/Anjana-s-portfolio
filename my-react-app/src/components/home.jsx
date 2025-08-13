@@ -15,7 +15,7 @@ function Home() {
     <div className="bg-[#f8f9ff] min-h-screen">
       {/* Navbar */}
       <div className="flex justify-between items-center px-6 py-4">
-        <h1 className="text-lg font-medium text-gray-800">Anjana O</h1>
+        <h1 className="text-lg font-medium text-gray-800 font-comfortaa">Anjana O</h1>
 
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-10 z-10" >
