@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className="bg-[#f8f9ff] min-h-screen">
       {/* Navbar */}
-      <div className="flex justify-between items-center px-6 py-4 ">
+      <div className="flex justify-between items-center px-6 py-4">
         <h1 className="text-lg font-medium text-gray-800">Anjana O</h1>
 
         {/* Desktop menu */}
