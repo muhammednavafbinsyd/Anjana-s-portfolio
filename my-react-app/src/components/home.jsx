@@ -61,8 +61,7 @@ function Home() {
             <span>Anjana O</span>
           </h1>
           <p className="text-gray-600 mt-4 font-poppins">
-            Short text with details about you, what you do or your professional
-            career. You can add more information on the about page.
+       I’m a passionate creative artist with a love for transforming ideas into visually captivating stories. My work blends imagination, emotion, and technique to create designs, illustrations, and artworks that inspire and connect with people. Whether it’s painting, digital art, or mixed media, I strive to bring a unique perspective to every project. My creative journey is fueled by curiosity, attention to detail, and a deep appreciation for beauty in everyday life.
           </p>
 
           {/* Buttons */}
