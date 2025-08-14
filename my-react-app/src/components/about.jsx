@@ -31,7 +31,7 @@ export default function App() {
 
       {/* Contact Section */}
       <section className="container mx-auto px-6 md:px-12 py-16 text-center flex-1">
-        <h2 className="text-2xl font-bold mb-1 font-playfair">Contact me</h2>
+        <h2 className="text-4xl font-bold mb-1 font-playfair">Contact me</h2>
         <div className="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
         
         <form className="max-w-md mx-auto space-y-4">
@@ -52,7 +52,7 @@ export default function App() {
           ></textarea>
           <button
             type="submit"
-            className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded text-sm font-medium"
+            className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded text-sm font-medium font-roboto"
           >
             Send
           </button>
@@ -62,14 +62,6 @@ export default function App() {
       {/* Footer */}
       <footer className="relative mt-12">
         <img src={waveSvg} alt="Wave" className="w-full" />
-        <div className="bg-yellow-400 text-center py-4 -mt-1">
-          <div className="flex justify-center gap-4 mb-2">
-            <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram" /></a>
-            <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" alt="LinkedIn" /></a>
-            <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/email.png" alt="Email" /></a>
-          </div>
-          <p className="text-sm font-comfortaa">Made by Muhammed Nawaf © 2025</p>
-        </div>
       </footer>
     </div>
   );

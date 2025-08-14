@@ -7,3 +7,19 @@
     --font-poppins: "Nunito", sans-serif;
     --font-roboto: 'Roboto', sans-serif;
 }
+
+body {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+   .profile-pc{
+         display: none;
+   }
+}
+@media (max-width: 1024px) {
+   .profile-pc{
+         display: none;
+   }
+}

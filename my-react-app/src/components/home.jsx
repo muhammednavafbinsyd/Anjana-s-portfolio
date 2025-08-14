@@ -85,7 +85,7 @@ function Home() {
         </div>
 
         {/* Right side with image & blob background */}
-        <div className="relative bottom-25 left-38 mt-10 md:mt-0 w-full md:w-1/2 flex justify-center">
+        <div className="relative bottom-25 left-38 mt-10 md:mt-0 w-full md:w-1/2 flex justify-center profile-pc">
           <div
             className="absolute top-0  right-0 w-[90%] h-[100%]"
           ></div>
