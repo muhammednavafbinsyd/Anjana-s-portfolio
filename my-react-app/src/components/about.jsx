@@ -8,13 +8,13 @@ export default function App() {
       {/* About Section */}
       <section className="container mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-center gap-8">
         <div className="flex-1 text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-4">About me</h2>
-          <p className="text-gray-600 mb-4">
+          <h2 className="text-4xl font-bold mb-4 font-playfair">About me</h2>
+          <p className="text-gray-600 mb-4 font-poppins">
             Nisl arcu, scelerisque neque ut. Tincidunt amet, tempor duis tortor
             neque auctor dis ipsum. Pretium cras amet odio amet eleifend id sed
             cras sed. Aliquet risus posuere aliquet imperdiet sit.
           </p>
-          <button className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded text-sm font-medium">
+          <button className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded text-sm font-medium font-roboto">
             Resume
           </button>
         </div>
@@ -22,7 +22,7 @@ export default function App() {
           <div className="rounded-full overflow-hidden justify-center">
             <img
               src={profileImg}
-              alt="Profile"
+              alt="Profile"  
               className="w-80 h-80 object-cover rounded-full border-4 border-none"
             />
           </div>
@@ -31,7 +31,7 @@ export default function App() {
 
       {/* Contact Section */}
       <section className="container mx-auto px-6 md:px-12 py-16 text-center flex-1">
-        <h2 className="text-2xl font-bold mb-1">Contact me</h2>
+        <h2 className="text-2xl font-bold mb-1 font-playfair">Contact me</h2>
         <div className="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
         
         <form className="max-w-md mx-auto space-y-4">
@@ -68,7 +68,7 @@ export default function App() {
             <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" alt="LinkedIn" /></a>
             <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/email.png" alt="Email" /></a>
           </div>
-          <p className="text-sm">Made by Muhammed Nawaf © 2025</p>
+          <p className="text-sm font-comfortaa">Made by Muhammed Nawaf © 2025</p>
         </div>
       </footer>
     </div>

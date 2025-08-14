@@ -18,7 +18,7 @@ function Home() {
         <h1 className="text-lg font-medium text-gray-800 font-comfortaa">Anjana O</h1>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-10 z-10" >
+        <div className="hidden md:flex space-x-10 z-10 font-comfortaa">
           {navigation.map((item) => (
             <a key={item.name} href={item.href} className="text-gray-800 hover:text-yellow-500">
               {item.name}
@@ -56,11 +56,11 @@ function Home() {
           <p className="text-sm font-semibold text-yellow-500 uppercase tracking-wide">
             Creative / Artist
           </p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">
+          <h1 className="text-5xl font-bold text-gray-900 mt-2 font-playfair">
             Hello, my name is <br />
             <span>Anjana O</span>
           </h1>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 mt-4 font-poppins">
             Short text with details about you, what you do or your professional
             career. You can add more information on the about page.
           </p>
@@ -69,7 +69,7 @@ function Home() {
           <div className="mt-6 flex space-x-4">
             <a
               href="#projects"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-5 py-2 rounded"
+              className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-5 py-2 rounded font-roboto"
             >
               Projects
             </a>
@@ -77,7 +77,7 @@ function Home() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-gray-800 px-5 py-2 rounded hover:bg-gray-100"
+              className="border border-gray-800 px-5 py-2 rounded hover:bg-gray-100 font-roboto"
             >
               LinkedIn
             </a>

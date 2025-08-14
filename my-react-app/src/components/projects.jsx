@@ -29,7 +29,7 @@ export default function Projects() {
     <section id="projects" className="px-4 md:px-28 py-28 bg-[#f8f9ff] ">
       {/* Section Title */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
+        <h2 className="text-4xl font-bold text-gray-900 font-playfair">Projects</h2>
         <div className="w-16 h-1 mx-auto mt-2"></div>
           <div className="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
       </div>
@@ -53,12 +53,12 @@ export default function Projects() {
             </div>
 
             {/* Text */}
-            <div className="md:w-1/4 p-6 flex flex-col justify-center">
-              <h3 className="text-xl font-semibold mb-4">{project.name}</h3>
+            <div className="md:w-2xl p-6 flex-col justify-center">
+              <h3 className="text-xl font-semibold mb-4 font-playfair">{project.name}</h3>
               <p className="text-gray-600 mb-6">{project.description}</p>
               <a
                 href="#"
-                className="inline-block border border-gray-800 px-5 py-2 rounded hover:bg-gray-100 transition"
+                className="inline-block border  border-gray-800 px-5 py-2 rounded-4xl hover:bg-gray-100 transition font-roboto"
               >
                 View Project
               </a>
