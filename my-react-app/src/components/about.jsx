@@ -4,24 +4,41 @@ import waveSvg from "../assets/shape1.svg";
 
 export default function App() {
 
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Message: "",
+  });
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const url = "https://script.google.com/macros/s/AKfycbxNVL4lteTFlCQdciemfKNPUsOLrOKLGN2t8fvjoKiy6X8-CQd1jyoDVHLULKEBFtJqzQ/exec";
-  
-  fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `Name=${encodeURIComponent(e.target.name.value)}&Email=${encodeURIComponent(e.target.email.value)}&Message=${encodeURIComponent(e.target.message.value)}`
-  })
-    .then(res => res.text())
-    .then(data => {
-      alert("Form submitted successfully!");
-      console.log(data);
-    })
-    .catch(err => console.error("Error:", err));
-};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwUFGI81TZ6CH5I4wRIf1aaOYSyPv4M-uzKZkWwzsqUQgdgPKwWsoEznNv77wY4k5Iq/exec", 
+        {
+          method: "POST",
+          body: new URLSearchParams(formData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        alert("✅ Message sent successfully!");
+        setFormData({ Name: "", Email: "", Message: "" }); // clear form
+      } else {
+        alert("❌ Something went wrong: " + result.message);
+      }
+    } catch (error) {
+      alert("⚠️ Error sending form. Please try again.");
+    }
+  };
+
 
 
   return (
@@ -53,36 +70,41 @@ const handleSubmit = async (e) => {
         <h2 className="text-4xl font-bold mb-1 font-playfair">Contact me</h2>
         <div className="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
 
-        <form
-          className="max-w-md mx-auto space-y-4"
-          onSubmit={handleSubmit}
-        >
-          <input
-            type="name"
-            name="name"
-            placeholder="Name"
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          />
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows="4"     
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded text-sm font-medium font-roboto"
-          >
-            Send
-          </button>
-        </form>
-
+        {/* ✅ Direct form submit to Google Apps Script (no CORS issues) */}
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
+      <input
+        type="text"
+        name="Name"
+        placeholder="Your Name"
+        value={formData.Name}
+        onChange={handleChange}
+        required
+      className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
+      <input
+        type="email"
+        name="Email"
+        placeholder="Your Email"
+        value={formData.Email}
+        onChange={handleChange}
+        required
+           className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
+      <textarea
+        name="Message"
+        placeholder="Your Message"
+        value={formData.Message}
+        onChange={handleChange}
+        required
+           className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+      ></textarea>
+      <button
+        type="submit"
+        className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded text-sm font-medium font-roboto"
+      >
+        Send
+      </button>
+    </form>
       </section>
 
       {/* Footer */}
